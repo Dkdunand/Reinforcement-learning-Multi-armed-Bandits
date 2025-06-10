@@ -1,0 +1,6 @@
+# Stage-1A-ENSAE
+Ce projet vise à explorer certaines possibilités et limitations des bandits « restless ». Nous commençons par étudier le problème des bandits manchots à bras finis dans le cadre « restless », tel que présenté par Grunewalder et Khaleghi (2019). Dans ce contexte, les distributions de récompense présentent des dépendances temporelles, contrairement au cadre classique i.i.d. (indépendant et identiquement distribué). Pour analyser les effets de ce **désalignement de modèle**, nous appliquons l'algorithme UCB1 d’Auer et al. (2002), initialement conçu pour des récompenses i.i.d., et évaluons ses performances dans ce cadre dépendant.
+
+L’objectif est d’observer l’impact des dépendances sur les performances de l’algorithme et d’évaluer dans quelle mesure les politiques d’exploration-exploitation classiques restent valables ou doivent être adaptées. Si le temps le permet, nous étendrons cette étude au cas des bandits linéaires en utilisant l’algorithme **LinUCB**, tel que présenté au chapitre 19 de Lattimore et Szepesvári, et nous comparerons ses résultats à ceux du **LinMix-UCB**, proposé par Khaleghi (2025), spécialement conçu pour les environnements dépendants.
+
+Ce projet combine théorie et expérimentation afin d’évaluer la robustesse des approches classiques dans des environnements plus réalistes.
