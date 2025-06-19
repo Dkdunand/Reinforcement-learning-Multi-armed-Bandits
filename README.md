@@ -1,5 +1,5 @@
 # Restless Bandits & Robust Exploration: A Theoretical and Experimental Study
-Objectif
+##Objectif
 Ce projet explore la robustesse des algorithmes de bandits manchots classiques dans un cadre non stationnaire, inspiré des environnements financiers réels. Nous étudions les bandits "restless", un cadre où les distributions de récompense évoluent avec le temps, contrairement au modèle i.i.d. traditionnel.
 
 L’objectif est d’évaluer comment les politiques d’exploration-exploitation — cruciales pour la prise de décision séquentielle — se comportent lorsqu’on les applique hors de leur cadre théorique optimal.
