@@ -1,6 +1,52 @@
-# Stage-1A-ENSAE
-Ce projet vise à explorer certaines possibilités et limitations des bandits « restless ». Nous commençons par étudier le problème des bandits manchots à bras finis dans le cadre « restless », tel que présenté par Grunewalder et Khaleghi (2019). Dans ce contexte, les distributions de récompense présentent des dépendances temporelles, contrairement au cadre classique i.i.d. (indépendant et identiquement distribué). Pour analyser les effets de ce **désalignement de modèle**, nous appliquons l'algorithme UCB1 d’Auer et al. (2002), initialement conçu pour des récompenses i.i.d., et évaluons ses performances dans ce cadre dépendant.
+# Restless Bandits & Robust Exploration: A Theoretical and Experimental Study
+# Objectif
+Ce projet explore la robustesse des algorithmes de bandits manchots classiques dans un cadre non stationnaire, inspiré des environnements financiers réels. Nous étudions les bandits "restless", un cadre où les distributions de récompense évoluent avec le temps, contrairement au modèle i.i.d. traditionnel.
 
-L’objectif est d’observer l’impact des dépendances sur les performances de l’algorithme et d’évaluer dans quelle mesure les politiques d’exploration-exploitation classiques restent valables ou doivent être adaptées. Si le temps le permet, nous étendrons cette étude au cas des bandits linéaires en utilisant l’algorithme **LinUCB**, tel que présenté au chapitre 19 de Lattimore et Szepesvári, et nous comparerons ses résultats à ceux du **LinMix-UCB**, proposé par Khaleghi (2025), spécialement conçu pour les environnements dépendants.
+L’objectif est d’évaluer comment les politiques d’exploration-exploitation — cruciales pour la prise de décision séquentielle — se comportent lorsqu’on les applique hors de leur cadre théorique optimal.
 
-Ce projet combine théorie et expérimentation afin d’évaluer la robustesse des approches classiques dans des environnements plus réalistes.
+ # Contexte
+🔬 Bandits manchots à bras finis, où les récompenses sont dépendantes temporellement.
+
+ Basé sur le cadre présenté par Grunewalder & Khaleghi (2019).
+
+Ce type de désalignement est analogue à de nombreux problèmes rencontrés en finance algorithmique, où les rendements sont souvent autocorrélés et non stationnaires.
+
+# Méthodologie
+Nous appliquons l’algorithme UCB1 (Auer et al., 2002), conçu pour des environnements i.i.d., à des données générées par des processus dépendants.
+
+L’objectif est d’observer l’impact de cette dépendance sur les performances et de déterminer si des ajustements sont nécessaires.
+
+# Expérimentations :
+
+Comparaison des performances UCB1 sous différentes intensités de dépendance temporelle.
+
+Simulations multiples avec échantillonnage contrôlé pour quantifier la dégradation des performances.
+
+ Extensions prévues
+Si le temps le permet, nous étendrons cette étude à :
+
+ Bandits linéaires, avec l’algorithme LinUCB (Lattimore & Szepesvári, 2020)
+
+ Comparaison avec LinMix-UCB (Khaleghi, 2025), conçu pour les environnements non-i.i.d.
+
+ # Pourquoi ce projet est pertinent pour un hedge fund ?
+ Exploration-exploitation en environnement incertain = cœur de l’allocation dynamique d’actifs.
+
+ Modélisation de la non-stationnarité des marchés : ce projet examine des situations analogues aux changements de régime, effets mémoire, autocorrélation.
+
+ Capacité à évaluer la robustesse algorithmique, une compétence clé en stratégie systématique.
+
+ Combinaison de recherche appliquée et d’implémentation expérimentale, avec une attention portée à la réalité opérationnelle.
+
+ # Références clés
+Auer et al. (2002) – Finite-time Analysis of the Multiarmed Bandit Problem
+
+Grunewalder & Khaleghi (2019) – Restless Bandits with Temporal Dependencies
+
+Lattimore & Szepesvári (2020) – Bandit Algorithms (Ch. 19)
+
+Khaleghi (2025) – LinMix-UCB: Bandit Learning with Structured Temporal Dependence
+
+
+
+
