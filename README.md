@@ -1,4 +1,6 @@
 # Restless Bandits : A Theoretical and Experimental Study
+![OIP (1)](https://github.com/user-attachments/assets/0fe4c158-2e73-4ce1-8f98-919ee7ba952c)
+
 # Objectif
 Ce projet explore la robustesse des algorithmes de bandits manchots classiques dans un cadre non stationnaire. Nous étudions les bandits "restless", un cadre où les distributions de récompense évoluent avec le temps, contrairement au modèle i.i.d. traditionnel.
 
